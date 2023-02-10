@@ -1,24 +1,26 @@
 import React from 'react';
-import { Button, Typography, AppBar, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Toolbar, Container, GlobalStyles } from '@mui/material';
+import { Button, Typography, AppBar, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Toolbar, Container, GlobalStyles, collapseClasses } from '@mui/material';
 import { PhotoCamera } from '@mui/icons-material';
-import useStyles from './styles'
+import Modal from './Modal'
+// import useStyles from './styles'
 
 
 
 
 const App = () => {
-  const classes = useStyles();
+  // const classes = useStyles();
   return (
     <div>
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
           <PhotoCamera />
+     
           <Typography variant ="h6"> Photo Album </Typography>        
         </Toolbar>
       </AppBar>
       <main>
-          <div className={classes.container}>
+          <div >
             <Container maxWidth="sm">
               <Typography variant="h2" align="center" color="textPrimary" gutterBottom style={{marginTop:"100px"}}> Photo Album</Typography>
               <Typography variant="h5"  align="center" color="textSecondary" paragraph> You are totally rocking this new set of dependencies. Really great job.</Typography>
@@ -27,7 +29,7 @@ const App = () => {
             <div>
               <Grid container spacing={2} justifyContent="center" >
                 <Grid item>
-                  <Button variant="contained" color="primary">See my photos</Button>
+                  <Button variant="contained" color="primary">Push ME</Button>
                 </Grid>
                 <Grid item>
                   <Button variant="outlined" color="primary">Yay</Button>
@@ -35,12 +37,16 @@ const App = () => {
               </Grid>
             </div>
           </div>
-
+        
       </main>
-     
+      
+     <Container  maxWidth="md">
+      <Modal />
+     </Container>
+        
+        
     </div>
   )
-
 }
 
 export default App;
