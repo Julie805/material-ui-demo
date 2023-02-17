@@ -1,7 +1,8 @@
 import React from 'react';
-import { Button, Typography, AppBar, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Toolbar, Container, GlobalStyles, collapseClasses } from '@mui/material';
+import { Button, Typography, AppBar, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Toolbar, Container, GlobalStyles, collapseClasses, makeStyles, Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
 import { PhotoCamera } from '@mui/icons-material';
 import Modal from './Modal'
+//import MyTable from './MyTable'
 // import useStyles from './styles'
 
 
@@ -39,7 +40,7 @@ const App = () => {
           </div>
         
       </main>
-      
+ 
      <Container  maxWidth="md">
       <Modal />
      </Container>
